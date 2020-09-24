@@ -35,15 +35,17 @@
     function getMother(){return $this->mother;}
     function getFather(){return $this->father;}
     
+    function getAge(){return $this->age;}
+    
     function getInfo(){
       return "
-      My name is: ".$this->getName()."<br>
-      My mother is: ".$this->getMother()->getName()."<br>
-      My father is: ".$this->getFather()->getName()."<br>
-      My mom's granny is: ".$this->getMother()->getMother()->getName()."<br>
-      My mom's grandfather is: ".$this->getMother()->getFather()->getName()."<br>
-      My dad's granny is: ".$this->getFather()->getMother()->getName()."<br>
-      My mom's grandfather is: ".$this->getFather()->getFather()->getName()."<br>
+      My name is  ".$this->getName().", my age is ".$this->getAge()." years old."."<br>
+      My mother is ".$this->getMother()->getName().", her age is ".$this->getMother()->getAge()." years old."."<br>
+      My father is ".$this->getFather()->getName().", him age is ".$this->getFather()->getAge()." years old."."<br>
+      My mom's granny is ".$this->getMother()->getMother()->getName().", her age is ".$this->getMother()->getMother()->getAge()." years old."."<br>
+      My mom's grandfather is ".$this->getMother()->getFather()->getName().", him age is ".$this->getMother()->getFather()->getAge()." years old."."<br>
+      My dad's granny is ".$this->getFather()->getMother()->getName().", her age is ".$this->getFather()->getMother()->getAge()." years old."."<br>
+      My mom's grandfather is ".$this->getFather()->getFather()->getName().", him age is ".$this->getFather()->getFather()->getAge()." years old."."<br>
       ";
     }
   }
